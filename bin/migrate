@@ -97,6 +97,9 @@ while (args.length) {
       options.stateFile = required();
       break;
     default:
+      if (arg[0] === '-') {
+	break;
+      }
       if (options.command) {
         options.args.push(arg);
       } else {
